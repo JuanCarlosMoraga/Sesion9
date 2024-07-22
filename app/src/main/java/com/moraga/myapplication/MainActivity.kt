@@ -13,14 +13,15 @@ import kotlinx.coroutines.runBlocking
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
-        binding = ActivityMainBinding.inflate(layoutInflater)
+
         super.onCreate(savedInstanceState)
+        binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        funMain()
+        //funMain()
         }
 
-    private fun funMain() = runBlocking{
+    /*private fun funMain() = runBlocking{
         val context = this@MainActivity
         val db = DataBaseBuilder.getIntance(context)
 
@@ -35,5 +36,5 @@ class MainActivity : AppCompatActivity() {
         listCities.forEach{
             city -> cityDao.insert(city)
         }
-    }
+    }*/
 }
